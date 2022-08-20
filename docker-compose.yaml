@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: 'postgres:14.5'
+    ports:
+      - 5432:5432
+    volumes:
+      - "./autochek_data:/var/lib/postgresql/data:rw"
+    # restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: autochek_db
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    volumes:
+      - ./pgadmin_data:/var/lib/pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "8080:80"
