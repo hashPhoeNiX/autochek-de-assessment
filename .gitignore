@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Unwanted folders
+logs/
+
 # C extensions
 *.so
 
