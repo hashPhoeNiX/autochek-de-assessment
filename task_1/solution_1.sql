@@ -31,7 +31,7 @@ select
 	date_of_release,
 	term,
 	loanamount,
-	downpayment
+	downpayment,
 	state,
 	city,
 	zip_code,
